@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cara</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="Login_page_style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""> </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="Login_page.html">Login</a></li>
+                <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+    </section>
+    <section class="main-form">
+
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form style="display: block;">
+            <h3>Login Form</h3>
+
+            <label for="username">Username</label>
+            <input type="text" placeholder="Email" id="username">
+
+            <div id="password-container">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="passwordInp">
+                <button type="button" id="eye-button" onmousedown="revealPassword()">
+                    <img src="img/login/eye-white.svg" alt="" id="eye-img">
+                </button>
+
+            </div>
+
+            <button type="submit" onclick="validation()">Log In</button>
+
+            <label id="noAcct">Dont't have a account? <a href="SignUp_page.html">Create Account</a></label>
+
+            <div class="logos">
+                <a href="#"> <img src="img/login/Facebook_Logo_(2019).png.webp" alt="facebook"></a>
+                <a href="#"><img src="img/login/2702602.png" alt="google"></a>
+                <a href="#" class="githubl"><img src="img/login/image_processing20220801-17461-1m9zilq.png"
+                        alt="github"></a>
+            </div>
+        </form>
+    </section>
+</body>
+
+<script>
+    let passwordInp = document.querySelector("#passwordInp");
+    let eyeImg = document.querySelector("#eye-img");
+    function revealPassword() {
+        if (passwordInp.getAttribute("type") === "password") {
+            passwordInp.setAttribute("type", "text");
+            eyeImg.setAttribute("src", "img/login/eye-white-crossed.svg");
+        } else {
+            passwordInp.setAttribute("type", "password");
+            eyeImg.setAttribute("src", "img/login/eye-white.svg");
+        }
+    }
+
+    function validation() {
+        let status = validateForm();
+        if (!status) {
+            alert("Invalid email or password");
+        } else {
+            alert("Valid email or password");
+        }
+    }
+
+    function validateForm() {
+        let finalStatus = false;
+        let mailStatus = false;
+        let passwordStatus = false;
+        // Get input values
+        var email = document.getElementById('username').value;
+        var password = document.getElementById('passwordInp').value;
+
+        // Regular expression for email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Regular expressions for password validation
+        var specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/; // Special character
+        var digitRegex = /\d/; // Digit
+        var uppercaseRegex = /[A-Z]/; // Uppercase letter
+        var lowercaseRegex = /[a-z]/; // Lowercase letter
+
+        // Validate email
+        if (!emailRegex.test(email)) {
+            mailStatus = false;
+        } else {
+            mailStatus = true;
+        }
+
+        // Validate password
+        if (
+            !specialCharRegex.test(password) ||
+            !digitRegex.test(password) ||
+            !uppercaseRegex.test(password) ||
+            !lowercaseRegex.test(password)
+        ) {
+            passwordStatus = false;
+        } else {
+            passwordStatus = true;
+        }
+
+        // Check if both email and password are valid
+        if (mailStatus && passwordStatus) {
+            finalStatus = true;
+        } else {
+            finalStatus = false;
+        }
+        return finalStatus;
+    }
+
+</script>
+
+</html>

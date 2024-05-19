@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .flex-div {
+            height: 2000px;
+            /* Add height to enable scrolling */
+        }
+
+        .item {
+            opacity: 0;
+            /* Hide the items initially */
+            transform: translateY(100px);
+            /* Move the items down initially */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""> </a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Login_page.html">Login</a></li>
+                <li><a href="cart.html" id="lg-bag"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+
+        </div>
+    </section>
+
+    <section id="page-header" class="blog-header">
+        <h2>#readmore</h2>
+
+        <p>Read all case studies about our products!</p>
+    </section>
+
+    <section id="blog" class="flex-div">
+        <div class="blog-box item">
+            <div class="blog-img">
+                <img src="img/blog/b1.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+                <p>Kickstarter man braid godard coloring bok. Racelette waistcoat selfies yr wolf
+                    chartreuse hexagon irony, godard...
+                </p>
+                <a href="#">CONTINUE READING </a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+
+        <div class="blog-box item">
+            <div class="blog-img">
+                <img src="img/blog/b2.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>How to style a Quiff</h4>
+                <p>Kickstarter man braid godard coloring bok. Racelette waistcoat selfies yr wolf
+                    chartreuse hexagon irony, godard...
+                </p>
+                <a href="#">CONTINUE READING </a>
+            </div>
+            <h1>13/04</h1>
+        </div>
+
+        <div class="blog-box item">
+            <div class="blog-img">
+                <img src="img/blog/b3.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Must Have Skater Girl Items</h4>
+                <p>Kickstarter man braid godard coloring bok. Racelette waistcoat selfies yr wolf
+                    chartreuse hexagon irony, godard...
+                </p>
+                <a href="#">CONTINUE READING </a>
+            </div>
+            <h1>12/01</h1>
+        </div>
+
+
+        <div class="blog-box item">
+            <div class="blog-img">
+                <img src="img/blog/b4.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Runway-Inspired Trends</h4>
+                <p>Kickstarter man braid godard coloring bok. Racelette waistcoat selfies yr wolf
+                    chartreuse hexagon irony, godard...
+                </p>
+                <a href="#">CONTINUE READING </a>
+            </div>
+            <h1>16/01</h1>
+        </div>
+
+        <div class="blog-box item">
+            <div class="blog-img">
+                <img src="img/blog/b5.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>AW20 Menswear Trends</h4>
+                <p>Kickstarter man braid godard coloring bok. Racelette waistcoat selfies yr wolf
+                    chartreuse hexagon irony, godard...
+                </p>
+                <a href="#">CONTINUE READING </a>
+            </div>
+            <h1>10/03</h1>
+        </div>
+    </section>
+
+    <!-- <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section> -->
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shope and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> 123 prahladnagar road,ahmedabad</p>
+            <p><strong>Phone: </strong>+91 1234567890/+91 4412290900</p>
+            <p><strong>Hours:</strong>10:00 - 22:00,MON-SAT</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & conditions</a>
+            <a href="#">contact Us</a>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">My Account</a>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Playstore</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+    </footer>
+
+    <div class="footer-last-text">
+        &copy;JAY SHREE RAM
+    </div>
+
+    <!-- <script>
+        gsap.to(".flex-div .item", {
+            scrollTrigger: {
+                trigger: ".flex-div .item",
+                start: "top 80%",
+                end: "bottom 60%",
+                // markers:true,
+                onEnter: function () {
+                    gsap.fromTo(
+                        ".flex-div .item",
+                        { y: 100, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto",
+                        }
+                    );
+                },
+
+                onLeave: function () {
+                    gsap.fromTo(
+                        ".flex-div .item",
+                        { autoAlpha: 1 },
+                        { autoAlpha: 0, overwrite: "auto" }
+                    );
+                },
+
+                onEnterBack: function () {
+                    gsap.fromTo(
+                        ".flex-div .item",
+                        { y: -100, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            y: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto",
+                        }
+                    );
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(
+                        ".flex-div .item",
+                        { autoAlpha: 1 },
+                        { autoAlpha: 0, overwrite: "auto" }
+                    );
+                },
+            },
+        }); -->
+
+    <!-- </script> -->
+
+    <script>
+        // Use GSAP to animate items when they enter the viewport
+        gsap.to(".flex-div .item", {
+            scrollTrigger: {
+                trigger: ".flex-div",
+                start: "top 80%", // Start the animation when the trigger is 80% in view
+                end: "bottom 60%", // End the animation when the trigger is 60% from the bottom
+                // markers:true,
+            },
+            opacity: 1, // Fade in the items
+            y: 0, // Move the items up (to their original position)
+            duration: 1.25,
+            ease: "back",
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
